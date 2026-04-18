@@ -44,7 +44,7 @@ The system is divided into two main control layers:
 * Computes inverse kinematics for each leg
 * Sends position commands to the embedded layer
 
-
+![System Diagram](images/images/spider_robot_circuit_diagram.png)
 
 ---
 
@@ -103,7 +103,12 @@ Each leg is modeled as a 3-DOF manipulator. Inverse kinematics is used to comput
 
 ![hexapod-robot-18dof](images/images/spider_robot_top.jpg)
 
+## 🎥 Videos
+[Watch the robot move](https://youtube.com/shorts/eGpfh7yHkqs?feature=share)
 
+[Robot ROS simulation (Joint State)](https://youtu.be/XgGaehNCocc)
+
+[Robot simulation (URDF)](https://youtu.be/5gbO4OF5Jxg)
 
 ---
 
