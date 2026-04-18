@@ -44,6 +44,8 @@ The system is divided into two main control layers:
 * Computes inverse kinematics for each leg
 * Sends position commands to the embedded layer
 
+
+
 ---
 
 ## 🔩 Hardware Components
@@ -95,9 +97,10 @@ Each leg is modeled as a 3-DOF manipulator. Inverse kinematics is used to comput
 ---
 
 ## 📷 Media
+## 📷 Project Preview
 
-(Add images and videos here)
-
+![hexapod-robot-18dof](images/images/spider_robot_top.jpg)
+![hexapod-robot-18dof](images/images/spider_robot_cad.jpg)
 ---
 
 ## 📁 Repository Structure
