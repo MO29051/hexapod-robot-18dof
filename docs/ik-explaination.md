@@ -1,1 +1,112 @@
 
+# Inverse Kinematics (IK) – Hexapod Robot
+
+## 📌 Overview
+
+Inverse kinematics (IK) is used to compute the required joint angles for each leg so that the robot’s foot reaches a desired position in 3D space.
+
+Each leg of the hexapod is modeled as a 3-degree-of-freedom (DOF) manipulator.
+
+---
+
+## 🦿 Leg Configuration
+
+Each leg consists of:
+
+* Coxa joint (horizontal rotation)
+* Femur joint (vertical motion)
+* Tibia joint (extension)
+
+Total DOF per leg: **3**
+
+---
+
+## 🎯 Problem Definition
+
+Given a target foot position:
+
+```id="nq9jtt"
+(x, y, z)
+```
+
+Compute the joint angles:
+
+```id="skkz7c"
+θ1 (coxa), θ2 (femur), θ3 (tibia)
+```
+
+---
+
+## 🧠 Solution Approach
+
+### 1. Base Rotation (Coxa Angle)
+
+The first joint rotates the leg in the horizontal plane:
+
+\theta_1 = \tan^{-1}\left(\frac{y}{x}\right)
+
+---
+
+### 2. Planar Reduction
+
+The 3D problem is reduced into a 2D problem:
+
+```id="u2r5m1"
+r = √(x² + y²) - L1
+d = √(r² + z²)
+```
+
+Where:
+
+* L1 = Coxa length
+* d = distance to target point
+
+---
+
+### 3. Joint Angles (Femur & Tibia)
+
+Using the law of cosines:
+
+\theta_3 = \cos^{-1}\left(\frac{L_2^2 + L_3^2 - d^2}{2 L_2 L_3}\right)
+
+\theta_2 = \tan^{-1}\left(\frac{z}{r}\right) + \cos^{-1}\left(\frac{L_2^2 + d^2 - L_3^2}{2 L_2 d}\right)
+
+Where:
+
+* L2 = Femur length
+* L3 = Tibia length
+
+---
+
+## 🔄 Implementation
+
+* IK is computed in the ROS layer (Python)
+* Output angles are sent to Arduino via serial communication
+* Arduino converts angles into PWM signals using PCA9685
+
+---
+
+## ⚙️ Assumptions
+
+* Rigid links
+* Ideal joint rotation
+* No external disturbances
+* Flat terrain
+
+---
+
+## 📊 Outcome
+
+Using IK allowed:
+
+* Smooth and precise leg positioning
+* Coordinated gait generation
+* Stable walking motion
+
+---
+
+## 🚀 Future Improvements
+
+* Add feedback (closed-loop control)
+* Handle uneven terrain
+* Optimize computation speed
