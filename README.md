@@ -44,6 +44,7 @@ The system is divided into two main control layers:
 * Computes inverse kinematics for each leg
 * Sends position commands to the embedded layer
 
+### 🔹 ROS → Arduino → PCA9685 → Servos
 ![System Diagram](images/images/spider_robot_circuit_diagram.png)
 
 ---
