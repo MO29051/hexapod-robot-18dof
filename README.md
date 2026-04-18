@@ -99,8 +99,12 @@ Each leg is modeled as a 3-DOF manipulator. Inverse kinematics is used to comput
 ## 📷 Media
 ## 📷 Project Preview
 
+![hexapod-robot-18dof](images/images/spider_robot_cad.png)
+
 ![hexapod-robot-18dof](images/images/spider_robot_top.jpg)
-![hexapod-robot-18dof](images/images/spider_robot_cad.jpg)
+
+
+
 ---
 
 ## 📁 Repository Structure
