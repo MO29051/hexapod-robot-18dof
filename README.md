@@ -105,7 +105,7 @@ Each leg is modeled as a 3-DOF manipulator. Inverse kinematics is used to comput
 ![hexapod-robot-18dof](images/images/spider_robot_top.jpg)
 
 ## 🎥 Videos
-[Watch the robot move](https://youtube.com/shorts/eGpfh7yHkqs?feature=share)
+[Watch the robot move](https://youtube.com/shorts/7h3Il6gI8jU?feature=share)
 
 [Robot ROS simulation (Joint State)](https://youtu.be/XgGaehNCocc)
 
